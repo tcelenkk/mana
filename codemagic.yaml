@@ -1,29 +1,21 @@
 workflows:
   ios-workflow:
-    name: iOS Build
+    name: iOS Build & TestFlight
     instance_type: mac_mini_m1
-    max_build_duration: 60
-    integrations:
-      app_store_connect: tcelenkk@gmail.com  # buraya Apple ID mailini yaz
+    max_build_duration: 120
     environment:
-      vars:
-        XCODE_WORKSPACE: "Runner.xcworkspace"
-        XCODE_SCHEME: "Runner"
       flutter: stable
+      vars:
+        APPLE_ID: tcelenkk@gmail.com
+        APP_SPECIFIC_PASSWORD: lfih-fvic-ogmf-jfxn   # BURAYA 16 HANELİ ŞİFREYİ YAZ
     triggering:
       events:
         - push
       branch_patterns:
         - pattern: main
     scripts:
-      - name: Flutter build iOS
-        script: |
-          flutter packages pub get
-          flutter build ios --release --no-codesign
-      - name: Xcode build
-        script: |
-          xcode-project use-profiles
-          flutter build ipa --release
+      - flutter packages pub get
+      - flutter build ipa --release
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:
@@ -31,4 +23,6 @@ workflows:
         recipients:
           - tcelenkk@gmail.com
       app_store_connect:
+        apple_id: $APPLE_ID
+        password: $APP_SPECIFIC_PASSWORD
         submit_to_testflight: true

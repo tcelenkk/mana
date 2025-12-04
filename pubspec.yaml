@@ -1,0 +1,48 @@
+name: mana
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.15.2  # Firebase için temel
+  cloud_firestore: ^5.4.4  # Kelimeler ve beğeniler için database
+  firebase_auth: ^5.3.1  # Kullanıcı beğenilerini takip için anonymous auth
+  google_mobile_ads: ^5.1.0  # Reklamlar (AdMob)
+  connectivity_plus: ^7.0.0  # İnternet kontrolü
+  screenshot: ^3.0.0  # Ekran görüntüsü için
+  share_plus: ^10.0.0  # Paylaşım için
+  flutter_swipe_detector: ^2.0.0  # Swipe için (PageView zaten var ama yardımcı)
+  cupertino_icons: ^1.0.8
+  firebase_database: ^11.3.10
+  font_awesome_flutter: ^10.12.0
+  animated_text_kit: ^4.3.0
+  shared_preferences: ^2.5.3
+  provider: ^6.1.5+1
+  lottie: ^3.3.2
+  flutter_animate: ^4.5.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  fonts:
+    - family: Ahkio
+      fonts:
+        - asset: assets/fonts/Ahkio.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu.ttf
+  assets:
+    - assets/images/
+    - assets/images/noise.png
+    - assets/images/app_stores.png
+    - assets/lottie/heart_burst.json

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "734986979458",
+    "firebase_url": "https://mana-app-4d970-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mana-app-4d970",
+    "storage_bucket": "mana-app-4d970.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734986979458:android:c5cff8a792fb43e460cc9b",
+        "android_client_info": {
+          "package_name": "com.mana.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzL36GgF1fw-o8cwg-frCIPnwE1JO_5_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
